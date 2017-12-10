@@ -10,26 +10,21 @@
 <link href="css/estilo.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-
 <div id="estilo">
-
 	<form action="MusicaController" method="post">
 	  <input type="hidden" name="tela" value="acesso"/>		
 	  <input type="submit" value="Cadastre uma nova música"/><br/><br/>
-	</form>
-			
-		<h1 style="font-size:30px;">Música cadastrada com sucesso!</h1>
+	</form>	
+		<h1>Música cadastrada com sucesso!</h1>
 		  <c:forEach var="musica" items="${dados}">
-			<div style=" margin:10px;text-align:center;color:white;text-shadow:1px 1px 1px black;font-size:20px;">
+			<div>
 			${musica}	
 			</div>	
-		   <h1 style="clear:both; text-align:center;font-size:20px;text-shadow:1px 1px 1px black;">
-		  <a style="color:white" href="GeneroController">Ir para a loja</a></h1>
+		   <h1>
+		  <a href="GeneroController">Ir para a loja</a></h1>
 		</c:forEach>
 	   </div>
-		
 	<br/>
    <br/>
-	
  </body>
 </html>

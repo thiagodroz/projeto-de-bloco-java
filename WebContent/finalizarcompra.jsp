@@ -9,22 +9,20 @@
 <title>Finalizar compra</title>
 </head>
 <body>
-
-  <div style="text-align:center;">
+  <div>
 	<h1>Obrigado pela compra!</h1>
 	<c:forEach var="musica" items="${listarCompras}">
-		<div style="float:left;">
-			<img style="width:300px;" src="${musica.getImagem()}"/><br/>
+		<div>
+			<img src="${musica.getImagem()}"/><br/>
 			<h2>${musica.getNome()}</h2><br/>
 		</div>
 	</c:forEach>
 	<br/>
-	<h3 style="background-color:gray;border-radius:4px;padding: 2px;width: 7%;margin: 50px auto;box-shadow: 1px 1px 10px black;clear:both;">
-	  <a style="color:white;text-decoration:none;" href="GeneroController">
+	<h3>
+	  <a href="GeneroController">
 	    Voltar para a loja
 	  </a>
 	 </h3>
   </div>
-
 </body>
 </html>

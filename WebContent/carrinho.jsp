@@ -11,32 +11,28 @@
 <title>Carrinho de compras</title>
 </head>
 <body>
-	
-	<div style="text-align:center;margin-top:30px;margin-bottom:-70px;">
+	<div>
 	  <form action="GeneroController" method="get">
 		<input type="submit" value="Continuar comprando" />		
 	  </form>
 	</div>
-
 		<c:forEach var="compra" items="${lista}">	
  		 <form action="CarrinhoController" method="get">
 		  <input type="hidden" name="tela" value="excluir" />
-		   <div style="float:left; margin:50px 15px;text-align:center;color:black;font-size:20px;">
-		    <img style="width: 300px; " src="${compra.getImagem()}"/><br/>
+		   <div>
+		    <img src="${compra.getImagem()}"/><br/>
 		     ${compra.getNome()}<br/>
-		    <input type="hidden" name="produto" value="${compra.getId()}"/> 
+		    <input type="hidden" name="musica" value="${compra.getId()}"/> 
 		   <input type="submit" value="Remover do carrinho" />
 		  </div> 
 		 </form>
 		</c:forEach>
-
 	<div style="clear:both;text-align:center;">
 	  <form action="CarrinhoController" method="get">
 	    <input type="hidden" name="sessao" value="${sessao.getUserName()}"/> 
 	    <input type="hidden" name="tela" value="comprar" />
 		<input type="submit" value="Concluir compra" />
 	  </form>
-	</div>	
-	
+	</div>
   </body>
 </html>

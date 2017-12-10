@@ -9,12 +9,9 @@
 <title>Sucesso</title>
 </head>
 <body>
-
-	<div style="text-align: center;">
+	<div>
 		<h1>Usuário cadastrado com sucesso</h1>
-
 		   <h3>${dados}</h3>
-
 		<a href="GeneroController"><p>Ir para a loja</p></a>
 	</div>
 </body>

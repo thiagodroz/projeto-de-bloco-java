@@ -17,18 +17,14 @@
 <script src="js/funcaomenu.js"></script>
 </head>
 <body>
-
 	<section id="buscar">
 	   <form method="post" action="BuscarController">	
 		  <input id="search" type="text" name="procurar" placeholder="Procurar por musicas"/>	
 		  <input type="submit" value="Buscar"/>
 		</form>
 	</section>
-
 	<div id="menu">
 		<ul class="menu">
-       	  <a href="GeneroController">
-		  </a>
 			<li><a href="GeneroController">Home</a></li>
 			<li class="show-sub-menu"><a>Gêneros</a>
 				<ul class="sub-menu">
@@ -39,33 +35,30 @@
 			</li>	
 			<c:choose>
 		<c:when test="${sessao != null}">
-		   <h3 style="float: right;color:white;">Olá ${sessao.getNome()}!</h3>
+		   <h3>Olá ${sessao.getNome()}!</h3>
 		</c:when>
-		
 		<c:otherwise>	
 		   <li>	
 		<a style="color:white;" href="cadastro.jsp" href="#">			
-		   <h3 style="margin-top: -40px;margin-right: -70px;margin-bottom: -30px;">
+		   <h3>
 		     Crie sua conta	     
 		   </h3>
 		</a>
-		
-		<form style="display:inline-flex;" method="get" action="LoginController">	
+		<form method="get" action="LoginController">	
 		  <input type="text" name="username" placeholder="Username"/>
-		  <input style="margin-left:10px;" type="password" name="senha" placeholder="Senha"/>
-		  <input style="margin-left:10px;" type="submit" value="Entrar"/>
+		  <input type="password" name="senha" placeholder="Senha"/>
+		  <input type="submit" value="Entrar"/>
 		</form>
 		  </li>
 		</c:otherwise>
 	  </c:choose>	
 		  </ul>
 	  </div>
-	  
 	  <c:if test="${lista != null}">		
 		<c:forEach var="musica" items="${lista}">	
-		 <div style="float:left; margin:50px 15px;text-align:center;color:black;font-size:20px;">
+		 <div>
 		  <form action="CarrinhoController" method="post">
-            <img style="width:300px;" src="${musica.getImagem()}"/>
+            <img src="${musica.getImagem()}"/>
 		    <P>${musica.getNome()}</p>	
 		    <p>R$ ${musica.getPreco()}</p>
 	      	<input type="hidden" name="Comprar" value ="${musica.getId()}"/>				
@@ -75,10 +68,8 @@
 		</div>
 	  </c:forEach>		
 	</c:if>
-		
 		<c:if test="${alerta != null}">
-		  <h2 style="text-align:center;float: right;margin-right: 21%;">${alerta}</h2>
+		  <h2>${alerta}</h2>
 		</c:if>
-		
 </body>
 </html>

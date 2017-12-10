@@ -9,13 +9,11 @@
 <title>Confirma exclusão</title>
 </head>
 	<body>
-		
 	<h1>Confirma a exclusão da música ${musicaSelecionada.getNome()} ?</h1>
 		<form method="post" action="MusicaController">
 			<input type="hidden" name="tela" value="confirmaexclusao"/>
 				<input type="hidden" value="${musicaSelecionada.getId()}" name="id"/>
 			<input type="submit" value="Excluir música"/>
 	    </form>
-	
 	</body>
 </html>

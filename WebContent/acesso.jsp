@@ -9,13 +9,13 @@
 <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
 <link href="css/estilo.css" rel="stylesheet" type="text/css"/>
 </head>
-<body style="background-color:#5a2d82;">
+<body>
 
-<div style="text-align:center;">
+<div>
 	<form action="ProdutoController" method="get">
 	  <input type="hidden" name="tela" value="cadastro"/>
-		<h1 style="font-size:50px;color:white;text-shadow:1px 1px 10px black;">Cadastre a música</h1><br/><br/>
-		<h3 style="color:white;text-shadow:1px 1px 10px black;">Selecione o gênero
+		<h1>Cadastre a música</h1><br/><br/>
+		<h3>Selecione o gênero
 		  <select style="width:150px;" name="categoria">
 		   <option value="Rock">Rock</option>
 		   <option value="Pop">Pop</option>
@@ -24,25 +24,24 @@
 		   <option value="Blues">Jazz</option>
 		  </select>
 		</h3>
-		<input type="text" style="border-radius:5px;padding:5px;margin:20px;" placeholder="Imagem do álbum" name="imagem"/>
-		<input type="text" style="border-radius:5px;padding:5px;margin:20px;" placeholder="Nome da música"  name="nome" /><br/><br/>
-		<input type="text" style="border-radius:5px;padding:5px;margin:20px;" placeholder="Artista da música"  name="artista" /><br/><br/>
-		<input type="text" style="border-radius:5px;padding:5px;margin:20px;" placeholder="Descrição da música" name="descricao" />
-		<input  type="text" style="border-radius:5px;padding:5px;margin:20px;" placeholder="Preço da música" name="preco" /><br/><br/>
-		<input style="border-radius:10px;font-size:15px;padding:5px;margin:10px;" type="submit" value="Cadastrar"/>	
+		<input type="text" placeholder="Imagem do álbum" name="imagem"/>
+		<input type="text" placeholder="Nome da música"  name="nome" /><br/><br/>
+		<input type="text" placeholder="Artista da música"  name="artista" /><br/><br/>
+		<input type="text" splaceholder="Descrição da música" name="descricao" />
+		<input type="text" placeholder="Preço da música" name="preco" /><br/><br/>
+		<input type="submit" value="Cadastrar"/>	
 			</form>
 			
 			<br/>
 			
-			<h3 style="font-size:25px;color:yellow;font-weight:bold;text-shadow:1px 1px 1px black;">
+			<h3>
 			  <c:if test="${alerta!=null}">				
 				<c:out value="${alerta}"></c:out>     
 			  </c:if>
 			</h3>
-			 <br/>
 									   
 				<form action="paineladministrador.jsp">
-			     <input type="submit" value="Voltar" style="border-radius:10px;font-size:15px;margin:15px;padding:5px"/>
+			     <input type="submit" value="Voltar" />
 				</form>
 	          </div>
 	

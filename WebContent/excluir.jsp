@@ -10,27 +10,24 @@
 <title>Excluir produto</title>
 </head>
 
-<body style="background-color:#5a2d82;">
-
-		<div style="text-align:center;">
-		<h1 style="font-size:50px;color:white;text-shadow:1px 1px 10px black;">
+<body>
+		<div>
+		<h1>
 		  Escolha uma música para exclusão
 		</h1><br/><br/>
-				
+			
 	  <form action="MusicaController" method="get">	
     <input type="hidden" name="tela" value="exclusao"/>
-	  <select style="border-radius:10px;font-size:20px;padding:5px;margin:20px;" name="musica">
+	  <select name="musica">
 		<c:forEach var="musica" items="${listaMusicas}">
 		 <option value="${musica.getId()}">${musica.getNome()}</option>
 		</c:forEach>
 	   </select>
-      <input style="border-radius:10px;font-size:15px;margin:15px;padding:5px" type="submit" value="Excluir música"/>	
+      <input type="submit" value="Excluir música"/>	
 	    </form>
-
 	<form action="paineladministrador.jsp">
-	 <input style="border-radius:10px;font-size:15px;margin:15px;padding:5px" type="submit" value="voltar"/>
+	 <input type="submit" value="voltar"/>
     </form>
    </div>
-
 </body>
 </html>
